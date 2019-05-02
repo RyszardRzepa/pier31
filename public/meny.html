@@ -174,21 +174,34 @@
                         <br> Bon appetitt!</p>
                     <br>
                     <div style="align-self: center">
-                        <form method="get" action="meny/Meny-Pier31-Middag-Vinter%202018-PDF.pdf">
-                            <button class="btn btn-big black" type="submit"><span>Hovedmeny</span></button>
-                        </form>
+                        <a id="main-meny" href="">
+                            <button class="btn btn-big black"><span>Hovedmeny</span></button>
+                        </a>
+
                     </div>
                         <br/>
                         <div style="align-self: center">
-                            <form method="get" action="meny/lunch.pdf">
-                                <button class="btn btn-big black" type="submit"><span>Lunchmeny</span></button>
-                            </form>
+
+                                <a id="lunch-meny" href="https://firebasestorage.googleapis.com/v0/b/pier-31.appspot.com/o/NY%20Sommermeny%202019%20Pier%2031%20Lunsj%20(1).pdf?alt=media&token=22a5e52b-cba1-4dc2-9627-517eade18099">
+                                    <button class="btn btn-big black"><span>Lunsj meny</span></button>
+                                </a>
+
+
                         </div>
                         <br />
                         <div style="align-self: center">
-                            <form method="get" action="meny/Julemeny.pdf">
-                                <button class="btn btn-big black" type="submit"><span>Julemeny</span></button>
-                            </form>
+
+                            <a id="lunch-meny-eng" href="https://firebasestorage.googleapis.com/v0/b/pier-31.appspot.com/o/NY%20Sommermeny%202019%20Pier%2031%20Lunsj%20(1).pdf?alt=media&token=22a5e52b-cba1-4dc2-9627-517eade18099">
+                                <button class="btn btn-big black"><span>Lunch menu - eng</span></button>
+                            </a>
+
+
+                        </div>
+                        <br />
+                        <div style="align-self: center">
+                            <a id="christmas-meny" href="https://firebasestorage.googleapis.com/v0/b/pier-31.appspot.com/o/NY%20Sommermeny%202019%20Pier%2031%20Lunsj%20(1).pdf?alt=media&token=22a5e52b-cba1-4dc2-9627-517eade18099">
+                                <button class="btn btn-big black"><span>Julemeny</span></button>
+                            </a>
                         </div>
                 </div><!-- .col-md-6 end -->
             </div><!-- .row end -->
@@ -234,9 +247,9 @@
                         <span class="centered">Åpningstider:</span>
                     </li>
 
-                    <li> Man - Fre: 11:00 - 23:00</li>
-                    <li>Lør: 16:00 - 23:00</li>
-                    <li>Søn: 12:00 - 20:00</li>
+                    <li id="mon-fred-footer"> Man - Fre: 11:00 - 23:00</li>
+                    <li id="lordag-footer">Lør: 16:00 - 23:00</li>
+                    <li id="sondag-footer">Søn: 12:00 - 20:00</li>
                 </ul>
             </div><!-- .col-md-4 end -->
             <div  class="fb-page fbpage" data-height="300" data-href="https://www.facebook.com/Pier31Italian/" data-tabs="timeline"
@@ -299,6 +312,40 @@
 <script src="js/TweenMax.min.js"></script> <!-- Plugin for smooth scrolling-->
 <script src="js/retina.min.js"></script><!-- retina images script -->
 <script src="js/ScrollToPlugin.min.js"></script> <!-- Plugin for smooth scrolling-->
+
+<script>
+  $(function(){
+    var sheetUrl = 'https://spreadsheets.google.com/feeds/cells/1g8hdDy-TvkqjeON4ZI_iXsUrch8OALLn-QdY2o_lsms/1/public/full?alt=json';
+    $.getJSON(sheetUrl, function(data){
+      var entry = data.feed.entry;
+      entry.map(function (item) {
+
+
+        if(item['gs$cell']['col'] === '2' && item['gs$cell']['row'] === '4') {
+          document.getElementById("mon-fred-footer").innerHTML = "Man - Fre: " + item['gs$cell']['$t']
+        }
+        if(item['gs$cell']['col'] === '3' && item['gs$cell']['row'] === '4') {
+          document.getElementById("lordag-footer").innerHTML = "Lør: " + item['gs$cell']['$t']
+        }
+        if(item['gs$cell']['col'] === '4' && item['gs$cell']['row'] === '4') {
+          document.getElementById("sondag-footer").innerHTML = "Son: " + item['gs$cell']['$t']
+        }
+        if(item['gs$cell']['col'] === '5' && item['gs$cell']['row'] === '4') {
+          document.getElementById("lunch-meny-eng").href = item['gs$cell']['$t']
+        }
+        if(item['gs$cell']['col'] === '6' && item['gs$cell']['row'] === '4') {
+          document.getElementById("lunch-meny").href = item['gs$cell']['$t']
+        }
+        if(item['gs$cell']['col'] === '7' && item['gs$cell']['row'] === '4') {
+          document.getElementById("main-meny").href = item['gs$cell']['$t']
+        }
+        if(item['gs$cell']['col'] === '8' && item['gs$cell']['row'] === '4') {
+          document.getElementById("christmas-meny").href = item['gs$cell']['$t']
+        }
+      })
+    })
+  });
+</script>
 
 <script>
 

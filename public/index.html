@@ -189,7 +189,7 @@
            data-effect="top(40)"
            data-duration="2000"
            data-ease="easeOutExpo"
-        ><span>11:00 - 23:00</span>
+        >Man-Fred: <span id="mon-fred">11:00 - 23:00</span>
         </p>
 
         <!-- slide text layer -->
@@ -200,7 +200,7 @@
            data-duration="2000"
            data-ease="easeOutExpo"
         >
-            Lør: <span>16:00-23:00</span>
+            Lør: <span id="lordag">16:00-23:00</span>
         </p>
 
 
@@ -211,7 +211,7 @@
            data-duration="2000"
            data-ease="easeOutExpo"
         >
-            Søn: <span>12:00 - 20:00</span>
+            Søn: <span id="sondag">12:00 - 20:00</span>
         </p>
 
     </div><!-- slide end -->
@@ -537,9 +537,9 @@
                     <li>
                         <span class="centered"><strong>Åpningstider:</strong></span>
                     </li>
-                    <li> Man - Fre: 11:00 - 23:00</li>
-                    <li>Lør: 16:00 - 23:00</li>
-                    <li>Søn: 12:00 - 20:00</li>
+                    <li id="mon-fred-footer"> Man - Fre: 11:00 - 23:00</li>
+                    <li id="lordag-footer">Lør: 16:00 - 23:00</li>
+                    <li id="sondag-footer">Søn: 12:00 - 20:00</li>
                 </ul>
             </div><!-- .col-md-4 end -->
 
@@ -604,6 +604,29 @@
 <script src="js/TweenMax.min.js"></script> <!-- Plugin for smooth scrolling-->
 <script src="js/retina.min.js"></script><!-- retina images script -->
 <script src="js/ScrollToPlugin.min.js"></script> <!-- Plugin for smooth scrolling-->
+
+    <script>
+      $(function(){
+        var sheetUrl = 'https://spreadsheets.google.com/feeds/cells/1g8hdDy-TvkqjeON4ZI_iXsUrch8OALLn-QdY2o_lsms/1/public/full?alt=json';
+        $.getJSON(sheetUrl, function(data){
+          var entry = data.feed.entry;
+          entry.map(function (item) {
+            if(item['gs$cell']['col'] === '2' && item['gs$cell']['row'] === '4') {
+              document.getElementById("mon-fred").innerHTML = item['gs$cell']['$t']
+              document.getElementById("mon-fred-footer").innerHTML = "Man - Fre: " + item['gs$cell']['$t']
+            }
+            if(item['gs$cell']['col'] === '3' && item['gs$cell']['row'] === '4') {
+              document.getElementById("lordag").innerHTML = item['gs$cell']['$t']
+              document.getElementById("lordag-footer").innerHTML = "Lør: " + item['gs$cell']['$t']
+            }
+            if(item['gs$cell']['col'] === '4' && item['gs$cell']['row'] === '4') {
+              document.getElementById("sondag").innerHTML = item['gs$cell']['$t']
+              document.getElementById("sondag-footer").innerHTML = "Son: " + item['gs$cell']['$t']
+            }
+          })
+        })
+      });
+    </script>
 
 <script>
   function initMap () {

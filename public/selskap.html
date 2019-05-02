@@ -117,7 +117,7 @@
                                             <a href="index.html#reservation">Reservasjon</a>
                                         </li>
 
-                                    
+
                                         <li class="dropdown">
                                             <a href="selskap.html">Selskap</a>
                                         </li>
@@ -165,12 +165,14 @@
                     <h3>Selskap</h3>
                     <br>
                 </div><!-- .custom-heading.style-1 end -->
-               
+
                 <p style="font-size: 14px; text-transform: uppercase;">Pier 31 Italian Food &amp; Wine  kan bookes til ulike arrangementer. Vi har plass til 68 gjester inne og 70 plasser ute. Vi har stor skjerm som kan brukes til fremføring av bilder og videoer. Restauranten vår passer perfekt for en  uformell forretningslunsj, en samling med kollegaer eller en plass for lukkede arrangement som jubileum, sommeravslutninger og julebord. Vi har Cicchetti menyer, italiensk tapas som er ment for å deles, og tre retters menyer å velge mellom. Vi har en utsøkt vinmeny som vi tilpasser til maten. Kreativt italiensk kjøkken, unik atmosfære og profesjonelt personale vil gjøre din dag spesiell. </p>
                 <br>
-                <form method="get" action="meny/SelskapsMeny.pdf">
-                    <button class="btn btn-big black" type="submit"><span>Selskapsmeny</span></button>
-                </form>
+
+                <a id="business-meny" href="">
+                    <button class="btn btn-big black"><span>SELSKAPMeny</span></button>
+                </a>
+
             </div><!-- .col-md-6 end -->
         </div><!-- .row end -->
     </div><!-- .container end -->
@@ -213,9 +215,9 @@
                         <span class="centered">Åpningstider:</span>
                     </li>
 
-                    <li> Man - Fre: 11:00 - 23:00</li>
-                    <li>Lør: 16:00 - 23:00</li>
-                    <li>Søn: 12:00 - 20:00</li>
+                    <li id="mon-fred-footer"> Man - Fre: 11:00 - 23:00</li>
+                    <li id="lordag-footer">Lør: 16:00 - 23:00</li>
+                    <li id="sondag-footer">Søn: 12:00 - 20:00</li>
                 </ul>
             </div><!-- .col-md-4 end -->
             <div  class="fb-page fbpage" data-height="300" data-href="https://www.facebook.com/Pier31Italian/" data-tabs="timeline"
@@ -278,6 +280,31 @@
 <script src="js/TweenMax.min.js"></script> <!-- Plugin for smooth scrolling-->
 <script src="js/retina.min.js"></script><!-- retina images script -->
 <script src="js/ScrollToPlugin.min.js"></script> <!-- Plugin for smooth scrolling-->
+
+
+<script>
+  $(function(){
+    var sheetUrl = 'https://spreadsheets.google.com/feeds/cells/1g8hdDy-TvkqjeON4ZI_iXsUrch8OALLn-QdY2o_lsms/1/public/full?alt=json';
+    $.getJSON(sheetUrl, function(data){
+      var entry = data.feed.entry;
+      entry.map(function (item) {
+
+        if(item['gs$cell']['col'] === '2' && item['gs$cell']['row'] === '4') {
+          document.getElementById("mon-fred-footer").innerHTML = "Man - Fre: " + item['gs$cell']['$t']
+        }
+        if(item['gs$cell']['col'] === '3' && item['gs$cell']['row'] === '4') {
+          document.getElementById("lordag-footer").innerHTML = "Lør: " + item['gs$cell']['$t']
+        }
+        if(item['gs$cell']['col'] === '4' && item['gs$cell']['row'] === '4') {
+          document.getElementById("sondag-footer").innerHTML = "Son: " + item['gs$cell']['$t']
+        }
+        if(item['gs$cell']['col'] === '9' && item['gs$cell']['row'] === '4') {
+          document.getElementById("business-meny").href = item['gs$cell']['$t']
+        }
+      })
+    })
+  });
+</script>
 
 <script>
 
