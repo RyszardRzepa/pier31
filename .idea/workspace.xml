@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f113f1be-c1ac-4b54-93a0-94b601b61564" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/public/selskap.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/selskap.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,30 +17,12 @@
     <option name="PATCH_PATH" value="" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="616" column="13" lean-forward="true" selection-start-line="616" selection-start-column="13" selection-end-line="616" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/meny.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="184" column="29" lean-forward="true" selection-start-line="184" selection-start-column="29" selection-end-line="186" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/selskap.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="373">
-              <caret line="300" column="40" selection-start-line="300" selection-start-column="40" selection-end-line="300" selection-end-column="40" />
+            <state relative-caret-position="269">
+              <caret line="411" column="24" selection-start-line="411" selection-start-column="24" selection-end-line="411" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -56,7 +38,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>res</find>
       <find>more de</find>
       <find>reser</find>
       <find>reserver</find>
@@ -84,8 +65,9 @@
       <find>form</find>
       <find>map</find>
       <find>åpni</find>
-      <find>ÅPNINGSTIDER</find>
       <find>main-meny</find>
+      <find>ÅPNINGSTIDER</find>
+      <find>date</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -110,9 +92,9 @@
         <option value="$PROJECT_DIR$/public/contact.php" />
         <option value="$PROJECT_DIR$/public/catering.html" />
         <option value="$PROJECT_DIR$/public/sendMail.js" />
+        <option value="$PROJECT_DIR$/public/selskap.html" />
         <option value="$PROJECT_DIR$/public/meny.html" />
         <option value="$PROJECT_DIR$/public/index.html" />
-        <option value="$PROJECT_DIR$/public/selskap.html" />
       </list>
     </option>
   </component>
@@ -126,6 +108,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -148,7 +131,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -232,12 +214,13 @@
       <workItem from="1545496238353" duration="310000" />
       <workItem from="1546873480395" duration="141000" />
       <workItem from="1556604988016" duration="298000" />
-      <workItem from="1556740513464" duration="4116000" />
+      <workItem from="1556740513464" duration="4353000" />
+      <workItem from="1556972210581" duration="570000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="129665000" />
+    <option name="totallyTimeSpent" value="130472000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="798" extended-state="0" />
@@ -371,31 +354,31 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/sendMail.js" />
-    <entry file="file://$PROJECT_DIR$/public/reservations.html">
+    <entry file="file://$PROJECT_DIR$/public/selskap.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="359" column="40" lean-forward="true" selection-start-line="359" selection-start-column="40" selection-end-line="359" selection-end-column="40" />
+        <state relative-caret-position="274">
+          <caret line="303" column="8" lean-forward="true" selection-start-line="303" selection-start-column="8" selection-end-line="303" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.html">
+    <entry file="file://$PROJECT_DIR$/public/reservations.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="616" column="13" lean-forward="true" selection-start-line="616" selection-start-column="13" selection-end-line="616" selection-end-column="13" />
+        <state relative-caret-position="372">
+          <caret line="359" column="40" lean-forward="true" selection-start-line="359" selection-start-column="40" selection-end-line="359" selection-end-column="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/meny.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="184" column="29" lean-forward="true" selection-start-line="184" selection-start-column="29" selection-end-line="186" selection-end-column="36" />
+        <state relative-caret-position="225">
+          <caret line="200" column="24" lean-forward="true" selection-start-line="200" selection-start-column="24" selection-end-line="200" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/selskap.html">
+    <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="300" column="40" selection-start-line="300" selection-start-column="40" selection-end-line="300" selection-end-column="40" />
+        <state relative-caret-position="269">
+          <caret line="411" column="24" selection-start-line="411" selection-start-column="24" selection-end-line="411" selection-end-column="24" />
         </state>
       </provider>
     </entry>
