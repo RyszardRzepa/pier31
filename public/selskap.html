@@ -172,6 +172,12 @@
                 <a id="business-meny" href="">
                     <button class="btn btn-big black"><span>SELSKAPMeny</span></button>
                 </a>
+                <br>
+                <br>
+
+                <a id="business-meny-eng" href="">
+                    <button class="btn btn-big black"><span>Business Menu</span></button>
+                </a>
 
             </div><!-- .col-md-6 end -->
         </div><!-- .row end -->
@@ -300,6 +306,9 @@
         }
         if(item['gs$cell']['col'] === '9' && item['gs$cell']['row'] === '4') {
           document.getElementById("business-meny").href = item['gs$cell']['$t']
+        }
+        if(item['gs$cell']['col'] === '10' && item['gs$cell']['row'] === '4') {
+          document.getElementById("business-meny-eng").href = item['gs$cell']['$t']
         }
       })
     })
