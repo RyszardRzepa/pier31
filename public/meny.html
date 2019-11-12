@@ -208,6 +208,16 @@
 
                         </div>
                         <br />
+                        <div style="align-self: center">
+
+                            <a id="jule-meny"
+                               href="https://firebasestorage.googleapis.com/v0/b/pier-31.appspot.com/o/NY%20Sommermeny%202019%20Pier%2031%20Lunsj%20(1).pdf?alt=media&token=22a5e52b-cba1-4dc2-9627-517eade18099">
+                                <button class="btn btn-big black"><span>Julebord meny</span></button>
+                            </a>
+
+
+                        </div>
+                        <br />
 
                     </div><!-- .col-md-6 end -->
                 </div><!-- .row end -->
@@ -347,6 +357,9 @@
         }
         if (item['gs$cell']['col'] === '7' && item['gs$cell']['row'] === '4') {
           document.getElementById("main-meny").href = item['gs$cell']['$t']
+        }
+        if (item['gs$cell']['col'] === '8' && item['gs$cell']['row'] === '4') {
+          document.getElementById("jule-meny").href = item['gs$cell']['$t']
         }
         if (item['gs$cell']['col'] === '11' && item['gs$cell']['row'] === '4') {
           document.getElementById("main-meny-engelsk").href = item['gs$cell']['$t']

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f113f1be-c1ac-4b54-93a0-94b601b61564" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/meny.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/meny.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -105,7 +105,8 @@
       <workItem from="1556740513464" duration="4353000" />
       <workItem from="1556972210581" duration="899000" />
       <workItem from="1558367009467" duration="1235000" />
-      <workItem from="1573135626229" duration="2116000" />
+      <workItem from="1573135626229" duration="2226000" />
+      <workItem from="1573570963227" duration="145000" />
     </task>
     <servers />
   </component>
@@ -117,7 +118,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
